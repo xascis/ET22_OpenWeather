@@ -7,7 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <StackPanel>
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF3DF1D9" Offset="0"/>
+                <GradientStop Color="#FFBEFF91" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <Button x:Name="Button" Content="Recuperar información meteorológica" Height="96" Width="340" Margin="10,0,0,0" Click="Button_Click"/>
+        <Button x:Name="btRegistrar" Content="Registrar Live Tile" Height="96" Width="340" Margin="10,0,0,0" Click="btRegistrar_Click"/>
+        <TextBlock x:Name="tbInfo" TextWrapping="Wrap" Text="Aquí aparecerá la información"/>
+        <Image x:Name="Icono" Width="200" Height="200"/>
+    </StackPanel>
 </Page>
